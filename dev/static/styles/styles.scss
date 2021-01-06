@@ -6,8 +6,9 @@
 //@include sprites($spritesheet-sprites);
 
 html {
-  font-family: 'Open Sans', Arial, serif;
-  font-size: 16px;
+  font-family: $basefont;
+  font-weight: 700;
+  @include adaptiv-font(30, 15, 0);
   height: 100%;
 }
 
@@ -70,6 +71,8 @@ button { outline: none; }
   margin: 0 auto;
   max-width: $content;
   width: 100%;
+  @include adaptiv-value(padding-left, 50, 10, 0);
+  @include adaptiv-value(padding-right, 50, 10, 0);
 }
 
 //Модули

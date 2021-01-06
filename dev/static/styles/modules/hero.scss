@@ -1,0 +1,120 @@
+.hero {
+  @include adaptiv-value(padding-top, 100, 40, 0);
+  @include adaptiv-value(margin-bottom, 140, 50, 0);
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    &--big {
+      flex: 0 0 74.3%;
+      @media screen and (max-width: $tablet) {
+        margin: 0 0 40px 0;
+      }
+    }
+    &--small {
+      flex: 0 0 22.9%;
+      max-width: 325px;
+      @media screen and (max-width: $tablet) {
+        max-width: none;
+        width: 100%;
+      }
+      @media screen and (max-width: $tablet) {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+      }
+      @media screen and (max-width: $mobile) {
+        flex-direction: column;
+      }
+    }
+  }
+  &__title {
+    @include adaptiv-font(65, 40, 0);
+    font-weight: 700;
+    line-height: 76px;
+    margin: 0 0 10px 0;
+    @media screen and (max-width: $mobile) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+  &__subtitle {
+    line-height: 35px;
+    margin: 0 0 50px 0;
+    @include adaptiv-value(margin-bottom, 50, 20, 1);
+    @media screen and (max-width: $mobile) {
+      line-height: 25px;
+    }
+  }
+  &__box {
+    align-items: center;
+    display: flex;
+    @media screen and (max-width: $mobile) {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  }
+  &__text {
+    @include adaptiv-font(25, 14, 0);
+    line-height: 40px;
+    margin: 0 40px 0 0;
+    width: 79%;
+    @media screen and (max-width: 1500px) {
+      width: 85%;
+    }
+    @media screen and (max-width: $tablet) {
+      line-height: 30px;
+      min-width: 50%;
+    }
+    @media screen and (max-width: $mobile) {
+      margin: 0;
+      order: 2;
+      width: 100%;
+    }
+  }
+  &__icon {
+    &--big {
+      width: 100%;
+      @media screen and (max-width: $tablet) {
+        height: auto;
+      }
+      @media screen and (max-width: $mobile) {
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+      }
+    }
+    &--small {
+      margin: 0 0 60px 0;
+      width: 100%;
+      @media screen and (max-width: 1500px) {
+        margin: 0 0 30px 0;
+      }
+      @media screen and (max-width: $tablet) {
+        height: auto;
+        margin: 0 40px 0 0;
+      }
+      @media screen and (max-width: $mobile) {
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+      }
+    }
+  }
+  &__description {
+    @include adaptiv-font(18, 13, 0);
+    line-height: 30px;
+    @media screen and (max-width: $tablet) {
+      width: 50%;
+      min-width: 50%;
+      @include adaptiv-font(25, 14, 0);
+    }
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.summary {
+  @include adaptiv-value(margin-bottom, 154, 50, 0);
+  &__title {
+    line-height: 1.18;
+    font-weight: 700;
+    margin: 0 0 50px 0;
+    @include adaptiv-font(55, 40, 0);
+    @media screen and (max-width: $mobile) {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $tablet) {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+  &__text {
+    line-height: 1.6;
+    margin: auto 0 0 0;
+    width: 31.4%;
+    @include adaptiv-font(18, 15, 0);
+    @media screen and (max-width: $tablet) {
+      margin: 0;
+      width: 55%;
+    }
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+    }
+    &--big {
+      @media screen and (max-width: $tablet) {
+        margin: 0 0 30px 0;
+        width: 100%;
+      }
+    }
+  }
+  &__icon {
+    margin-top: -113px;
+    height: auto;
+    width: 31.5%;
+    @media screen and (max-width: $tablet) {
+      margin: 0;
+      height: auto;
+      width: 40%;
+    }
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+}
